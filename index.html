@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Car Cost Calculator</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Калькулятор стоимости авто</h1>
+        <form action="" class="form" onsubmit="return false">
+            <div class="form-block startingPrice">
+                <div class="label-wrapper">
+                    <label for="startingPrice">Цена на аукционе, $</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="startingPrice">
+                </div>
+            </div>
+            <div class="form-block auction">
+                <div class="label-wrapper">
+                    <label for="auction">Аукцион</label>
+                </div>
+                <div class="input-wrapper">
+                    <select name="" id="auction">
+                        <option value="300">По умолчанию</option>
+                        <option value="450">Аукцион Silver</option>
+                        <option value="600">Аукцион Gold</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-block serviceType">
+                <div class="label-wrapper">
+                    <label for="">Тип услуги *</label>
+                </div>
+                <div class="input-wrapper">
+                    <label for="wholeCar">
+                        <input type="radio" name="type" id="wholeCar" value="1050">Целый автомобиль
+                    </label>
+                    <label for="x">
+                        <input type="radio" name="type" id="x" value="650">Распил легковой
+                    </label>
+                    <label for="y">
+                        <input type="radio" name="type" id="y" value="450">Распил рамный
+                    </label>
+                    <label for="z">
+                        <input type="radio" name="type" id="z" value="300">Конструктор легковой
+                    </label>
+                    <label for="c">
+                        <input type="radio" name="type" id="c" value="200">Конструктор джип, м/а, европ. марки
+                    </label>
+                    <label for="d">
+                        <input type="radio" name="type" id="d" value="100">Запласти на палете
+                    </label>
+                    <div class="errMess"></div>
+                </div>
+            </div>
+            <div class="form-block fuel">
+                <div class="label-wrapper">
+                    <label for="">Тип топлива *</label>
+                </div>
+                <div class="input-wrapper">
+                    <label for="petrol">
+                        <input type="radio" name="fuel" id="petrol" value="750">Бензин (включая гибрид)
+                    </label>
+                    <label for="dizel">
+                        <input type="radio" name="fuel" id="dizel" value="850">Дизельное топливо
+                    </label>
+                    <label for="electro">
+                    <input type="radio" name="fuel" id="electro" value="1050">Электрический
+                    </label>
+                </div>
+            </div>
+            <div class="form-block engine">
+                <div class="label-wrapper">
+                    <label for="engine">Объем двигателя, л</label>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" id="engine">
+                </div>
+            </div>
+            <div class="form-block carYear">
+                <div class="label-wrapper">
+                    <label for="">Возраст автомобиля *</label>
+                </div>
+                <div class="input-wrapper">
+                    <label for="younger">
+                        <input type="radio" name="age" id="younger" value="900">Меньше 3 лет
+                    </label>
+                    <label for="moreThree">
+                        <input type="radio" name="age" id="moreThree" value="700">От 3 до 5 лет
+                    </label>
+                    <label for="moreFive">
+                        <input type="radio" name="age" id="moreFive" value="500">От 5 до 7 лет
+                    </label>
+                    <label for="moreSeven">
+                        <input type="radio" name="age" id="moreSeven" value="300">Больше 7 лет
+                    </label>
+                </div>
+            </div>
+            <div class="form-block addServices">
+                <div class="label-wrapper">
+                    <label for="">Доп. услуги (по желанию)</label>
+                </div>
+                <div class="input-wrapper">
+                    <label for="broker">
+                        <input type="checkbox" name="broker" value="" data-value="400">Услуги брокера (+ $400)
+                    </label>
+                    <label for="port">
+                        <input type="checkbox" name="port" value="" data-value="500">Экспедиция в порту (+ $500)
+                    </label>
+                    <label for="pensionFund">
+                        <input type="checkbox" name="pensionFund" value="" data-percent="3">Пенсионный фонд (3%)
+                    </label>
+                    <label for="insurance">
+                        <input type="checkbox" name="insurance" value="" data-percent="5">Страховка (5%)
+                    </label>
+                    <label for="registering">
+                        <input type="checkbox" name="registering" value="" data-value="1000">Постановка на учет без присутствия
+                    </label>
+                </div>
+            </div>
+            <div class="form-block recipient">
+                <div class="label-wrapper">
+                    <label for="">Получатель *</label>
+                </div>
+                <div class="input-wrapper">
+                    <label for="personal">
+                        <input type="radio" name="recipient" id="personal" value="500">Физическое лицо
+                    </label>
+                    <label for="entity">
+                        <input type="radio" name="recipient" id="entity" value="1800">Юридическое лицо
+                    </label>
+                </div>
+            </div>
+            <button type="button" id="btn">Рассчитать</button>
+            <div id="result"></div>
+
+    </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
